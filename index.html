@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganpati Bappa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <div id="clock">--:--</div>
+      <div class="online"><span></span> 27 online</div>
+      <div class="links">
+        <a href="https://open.spotify.com/" target="_blank" rel="noopener">◉ Spotify ↗</a>
+        <a href="https://music.youtube.com/playlist?list=PLe_rRZETnxv8" target="_blank" rel="noopener">◉ YT Music ↗</a>
+      </div>
+    </div>
+
+    <section class="player-card" aria-label="Ganpati Bappa music player">
+      <img id="artwork" src="ganpati-bg.png" alt="Ganpati Bappa">
+      <div class="track-info">
+        <div id="trackTitle">Ganpati Bappa</div>
+        <div id="artist">Ganpati Bappa playlist</div>
+        <div class="progress-row">
+          <span id="current">0:00</span>
+          <input id="progress" type="range" min="0" max="100" value="0" aria-label="Progress">
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prev" aria-label="Previous">⏮</button>
+        <button id="play" class="play" aria-label="Play">▶</button>
+        <button id="next" aria-label="Next">⏭</button>
+      </div>
+      <div class="volume">
+        <button id="mute" aria-label="Mute">🔊</button>
+        <input id="volume" type="range" min="0" max="100" value="75" aria-label="Volume">
+      </div>
+    </section>
+
+    <div id="youtube-player" aria-hidden="true"></div>
+  </main>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
